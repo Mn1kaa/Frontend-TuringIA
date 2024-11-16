@@ -1,0 +1,95 @@
+// Definición de la paleta de colores
+$primary-color: #063655;
+$secondary-color: #3498db;
+$accent-color: #e74c3c;
+$background-color: #ecf0f1;
+$text-color: #2c3e50;
+
+.header{
+  position: relative;
+  height: 15vh;
+  width: 100vw;
+
+}
+
+
+.h-primera-seccion{
+  position: absolute;
+  height: 30%;
+  width: 100%;
+  background-color: $primary-color;
+}
+.bloque-span-uno{
+  position: absolute;
+  width: 20%;
+  height: 100%;
+
+
+  left: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+
+}
+
+.decoracion-uno{
+
+    display: inline-block;
+    margin-left: 3%;
+
+
+
+
+
+
+
+    width: 30%;  // Puedes ajustar el tamaño según tus necesidades
+    height: 25%; // Asegúrate de que el ancho y la altura sean iguales para formar un círculo
+    border-radius: 20%; // Esto convierte el cuadrado en un círculo
+    background-color: $secondary-color; // Color de fondo del círculo
+
+    color: white; // Color del texto
+    font-weight: bold; // Hace que el texto sea negrita
+
+
+}
+
+
+.bloque-span-dos{
+  position: absolute;
+
+  width: 15%;
+  height: 100%;
+
+
+  left: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+
+}
+
+.decoracion-dos{
+
+  display: inline-block;
+  margin-left: 5%;
+
+
+
+
+
+  width: 10%;  // Puedes ajustar el tamaño según tus necesidades
+  height: 60%; // Asegúrate de que el ancho y la altura sean iguales para formar un círculo
+  border-radius: 100%; // Esto convierte el cuadrado en un círculo
+  background-color: $accent-color; // Color de fondo del círculo
+
+  color: white; // Color del texto
+  font-weight: bold; // Hace que el texto sea negrita
+
+
+}
+
