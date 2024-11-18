@@ -1,1 +1,96 @@
-<p>szads</p>
+<body class="formulario-registro">
+
+  <h1 class="mt-3">REGISTRO DE COMPUTADORAS</h1>
+  <form [formGroup]="formComputadoras" class="example-form">
+
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <mat-label>Marca</mat-label>
+                <input formControlName="marca" matInput placeholder="Ex. HP">
+              </mat-form-field></td>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Almacenamiento</mat-label>
+                  <input formControlName="almacenamiento" matInput placeholder="Ex. 128GB">
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field class="example-full-width">
+                  <mat-label>RAM</mat-label>
+                  <input formControlName="memoria_ram" matInput placeholder="Ex. 8GB">
+                </mat-form-field></td>
+      </tr>
+
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Sistema Operativo</mat-label>
+            <input formControlName="sistema_operativo" matInput placeholder="Ex. Linux">
+          </mat-form-field>
+
+        </td>
+
+          <mat-form-field class="example-full">
+            <mat-label>Descripcion</mat-label>
+            <input formControlName="descripcion" matInput placeholder="Ex. Recien Llegada">
+          </mat-form-field>
+
+      </tr>
+      </table>
+    <section class="container-btns">
+
+      <button (click)="verComputadoras()" mat-raised-button>Ver</button>
+      <button (click)="crearComputadora()" mat-raised-button>Crear</button>
+      <button (click)="editarComputadora()" mat-raised-button>Modificar</button>
+      <button (click)="eliminarComputadora()" mat-raised-button>Eliminar</button>
+
+
+
+
+    </section>
+
+    <p  style="text-align: center;"  *ngIf="this.mensage!='' " class="alert alert-success mt-5">{{this.mensage}}</p>
+
+    </form>
+
+    <section class="mt-3">
+      <h2>[BOTON DELETE]: Ingresar ID que se desea eliminar y seguido Oprimir Eliminar <br>
+      [BOTON MODIFICAR] Rellenar Todos los campos con los datos que se  <br>cambiaran e ingresar ID del elemento a modificar luego oprimir Modificar</h2>
+      <mat-form-field class="example-full">
+        <mat-label>ID </mat-label>
+        <input  [formControl]="deleteCtrl" matInput type="number" placeholder="ID a eliminar">
+      </mat-form-field>
+    </section>
+
+    <div class="block" *ngIf="this.booleanComputadoras==true">
+
+      <table class="table mt-5">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Memoria Ram</th>
+            <th scope="col">Almacenamiento</th>
+            <th scope="col">Sistema Operativo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let computadora of arrayComputadoras">
+            <th style="text-align: center;" scope="row">{{computadora.id}}</th>
+            <td style="text-align: center;">{{computadora.marca}}</td>
+            <td style="text-align: center;">{{computadora.descripcion}}</td>
+            <td style="text-align: center;">{{computadora.memoria_ram}}</td>
+            <td style="text-align: center;">{{computadora.almacenamiento}}</td>
+            <td style="text-align: center;">{{computadora.sistema_operativo}}</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+
+
+</body>

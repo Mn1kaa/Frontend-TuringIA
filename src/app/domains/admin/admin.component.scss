@@ -1,0 +1,26 @@
+body{height: 100vh;}
+
+.formulario-registro{
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+}
+h1{
+ display: block;
+ color: #063655;
+ font-weight: 900;
+ font-size: 32px;
+}
+
+.container-btns{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.example-full{
+  width:100%;
+}
+
+.block{display: block;}

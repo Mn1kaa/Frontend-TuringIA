@@ -1,7 +1,9 @@
-<div class="row p-0 m-0 d-flex justify-content-center rowone">
+<body>
 
-  <div class="col-12 p-0 m-0 ">
-    <section class="custom">
+  <div class="row p-0 m-0 d-flex justify-content-center rowone">
+
+    <div class="col-12 p-0 m-0 ">
+      <section class="custom">
 
       <h1 style="text-align: center;">BIENVENIDO</h1>
       <p style="text-align: center;">a <strong>TODOELECTRONICA</strong> la Tienda de tu preferencia</p>
@@ -11,7 +13,7 @@
 
 
 </div>
-<div class="row  p-0 m-0 d-flex justify-content-center ">
+<div class="row  p-0 m-0 d-flex justify-content-center mt-5 ">
   <div class="col-9 d-flex justify-content-evenly">
 
     <section>
@@ -43,20 +45,20 @@
 
 <!-- COMPUTADORA -->
 <!-- ............................................ -->
-  <div *ngIf="this.boolean_computadora==true" class="card-container">
+<div *ngIf="this.boolean_computadora==true" class="card-container">
 
 
-      <mat-card style="text-align: center;" *ngFor="let item of this.array_computadoras_api" class="example-card" >
+  <mat-card style="text-align: center;" *ngFor="let item of this.array_computadoras_api" class="example-card" >
 
-        <mat-card-title>Computadora marca:{{item.marca}}</mat-card-title>
-        <mat-card-subtitle>Sistema Operativo: {{item.sistema_operativo}}</mat-card-subtitle>
-        <div>
+    <mat-card-title>Computadora marca:{{item.marca}}</mat-card-title>
+    <mat-card-subtitle>Sistema Operativo: {{item.sistema_operativo}}</mat-card-subtitle>
+    <div>
 
-          <img width="200" height="150" mat-card-image [src]="this.img_computadora" alt="Computadoras">
-        </div>
-        <mat-card-content>
-          Descripcion:{{item.descripcion}}
-          <br>
+      <img width="200" height="150" mat-card-image [src]="this.img_computadora" alt="Computadoras">
+    </div>
+    <mat-card-content>
+      Descripcion:{{item.descripcion}}
+      <br>
           Memoria RAM:{{item.memoria_ram}}
           <br>
           Almacenamiento: {{item.almacenamiento}}
@@ -64,15 +66,15 @@
       </mat-card>
 
 
-  </div>
+    </div>
 
-<!-- CELULARES -->
-<!-- ............................................ -->
+    <!-- CELULARES -->
+    <!-- ............................................ -->
 
-  <div *ngIf="this.boolean_celulares" class="card-container">
+    <div *ngIf="this.boolean_celulares" class="card-container">
 
 
-    <mat-card style="text-align: center;" *ngFor="let item of this.array_celulares_api" class="example-card" >
+      <mat-card style="text-align: center;" *ngFor="let item of this.array_celulares_api" class="example-card" >
 
       <mat-card-title>Celular marca:{{item.marca}}</mat-card-title>
       <mat-card-subtitle>Sistema Operativo: {{item.sistema_operativo}}</mat-card-subtitle>
@@ -112,5 +114,6 @@
       </mat-card-content>
     </mat-card>
   </div>
-<!-- ............................................ -->
+  <!-- ............................................ -->
 
+</body>

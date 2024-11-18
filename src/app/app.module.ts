@@ -8,11 +8,14 @@ import { MainComponent } from './domains/main_page/main/main.component';
 import { HeaderComponent } from './domains/header/header/header.component';
 import { AdminComponent } from './domains/admin/admin.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FooterComponent } from './domains/footer/footer.component';
+import { MatInputModule } from '@angular/material/input'
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponent,
+    FooterComponent,
 
 
   ],
@@ -22,7 +25,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     HeaderComponent,
     MainComponent,
-    ReactiveFormsModule
+    AdminComponent,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
